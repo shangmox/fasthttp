@@ -1,4 +1,4 @@
-module igit.58corp.com/wcloud/http_mesh/arch_wcloud_fasthttp
+module github.com/shangmox/fasthttp
 
 go 1.11
 
