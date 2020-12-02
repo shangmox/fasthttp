@@ -74,10 +74,6 @@ func (p *Part) FileName() (string, bool) {
 	if p.dispositionParams == nil {
 		p.parseContentDisposition()
 	}
-	for key, value := range p.dispositionParams {
-		fmt.Println("testmapppp %s=>%s", key, value)
-	}
-	fmt.Println("finish")
 	element, ok := p.dispositionParams["filename"]
 	return element, ok
 }

@@ -6,8 +6,8 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
+	"igit.58corp.com/wcloud/http_mesh/arch_wcloud_fasthttp/multipart"
 	"io"
-	"mime/multipart"
 	"net"
 	"os"
 	"sync"
@@ -1956,13 +1956,11 @@ func round2(n int) int {
 	if n <= 0 {
 		return 0
 	}
-
-	x := uint32(n - 1)
-	x |= x >> 1
-	x |= x >> 2
-	x |= x >> 4
-	x |= x >> 8
-	x |= x >> 16
-
-	return int(x + 1)
+	n--
+	x := uint(0)
+	for n > 0 {
+		n >>= 1
+		x++
+	}
+	return 1 << x
 }
