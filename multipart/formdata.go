@@ -154,10 +154,6 @@ func (fh *FileHeader) Open() (File, error) {
 	return os.Open(fh.tmpfile)
 }
 
-func (fh *FileHeader) Getcontent() []byte {
-	return fh.content
-}
-
 // File is an interface to access the file part of a multipart message.
 // Its contents may be either stored in memory or on disk.
 // If stored on disk, the File's underlying concrete type will be an *os.File.
