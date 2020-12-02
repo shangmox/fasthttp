@@ -6,7 +6,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	"igit.58corp.com/wcloud/http_mesh/arch_wcloud_fasthttp/multipart"
+	"github.com/shangmox/fasthttp/multipart"
 	"io"
 	"log"
 	"net"
